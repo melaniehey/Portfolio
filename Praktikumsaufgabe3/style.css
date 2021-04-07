@@ -11,8 +11,8 @@ a {
 #navibereich {
     background-color: gray;
     padding         : 5px 5px;
-    text-align      : right;
     position        : fixed;
+    right: 0;
     /*Navi bleibt an einer stelle und geht nur so lang, wie groß es ist*/
     top             : 0;
 }
@@ -40,9 +40,9 @@ a {
 }
 
 #navibereich a:hover,
-#index1.html #navi1 a,
-#index2.html #navi2 a,
-#index3.html #navi3 a {
+.index1 #navi1 a,
+.index2 #navi2 a,
+.index3 #navi3 a {
     color: mediumturquoise;
 }
 
@@ -90,14 +90,6 @@ img {
     /* Text zentrieren */
     text-align         : center;
     /* Inhalt vertikal mittig platzieren */
-    display            : -webkit-flex;
-    display            : -webkit-box;
-    display            : -ms-flexbox;
-    display            : flex;
-    -webkit-align-items: center;
-    -webkit-box-align  : center;
-    -ms-flex-align     : center;
-    align-items        : center;
 }
 
 .inside {
@@ -116,4 +108,22 @@ h2 {
 h3 {
     font-size: 17px;
     margin   : 0;
+}
+
+body {
+    max-width: 800px;
+    margin   : auto;
+}
+.icons img:hover{
+    opacity: 0.5;
+}
+#absender, #kontaktformular input[type="submit"]{
+    margin-bottom: 10px;
+}
+#kontaktformular input[type="text"], #kontaktformular textarea{
+    width: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
+    border: 1px solid lightgray;
+    border-radius: 3px;
 }

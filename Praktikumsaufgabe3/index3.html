@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body class="index3">
     <header>
         <img src="Medien/Name.png" alt="Name: Melanie Kirchkesner">
         <ul id="navibereich">
@@ -19,10 +19,20 @@
     </header>
     <main>
         <div class="container">
-            <img src="Medien/büro.jpg" alt="Büro Bild" width="1000">
+            <img src="Medien/büro.jpg" alt="Büro Bild" width="800">
             <div class="top-left">
                 <h1>CONTACT FORM</h1>
-                <p>*Kontaktformular*</p>
+                <form id="kontaktformular" name="kontaktformular">
+                    <div>
+                        <input type="text" placeholder="E-Mail-Adresse" id="absender" name="absender" />
+                    </div>
+                    <div>
+                        <textarea id="nachricht" placeholder="Nachricht" name="nachricht" cols="20" rows="5"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Abschicken" />
+                    </div>
+                </form>
                 <div class="icons">
                     <img src="Medien/instagram_mit.png" alt="Instagram Logo" width="40px">
                     <img src="Medien/facebook_ohne.png" alt="Facebook Logo" width="40px">
@@ -40,19 +50,7 @@
         <div>E-Mail: <a href="mailto:melaniekirchkesner22@gmail.com">melaniekirchkesner22@gmail.com</a></div>
         <div><img src="Medien/github.png" alt="Logo GitHub" />melaniehey</div>
         <div><img src="Medien/instagram.png" alt="Logo Instagram" />@mehlaniehey </div>
-        <form id="kontaktformular" name="kontaktformular">
-            <div>
-                <label for="absender">Ihre E-Mail-Adresse:</label>
-                <input type="text" id="absender" name="absender" />
-            </div>
-            <div>
-                <label for="nachricht">Ihre Nachricht:</label>
-                <textarea id="nachricht" name="nachricht" cols="20" rows="5"></textarea>
-            </div>
-            <div>
-                <input type="submit" value="Abschicken" />
-            </div>
-        </form>
+       
     </main>
     <footer>
         <aside>
