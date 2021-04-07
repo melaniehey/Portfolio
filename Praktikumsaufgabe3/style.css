@@ -1,0 +1,119 @@
+body {
+    background-image: url("hintergrund.png");
+    font-family     : sans-serif;
+    /* text-align   : center; */
+}
+
+a {
+    text-decoration: none;
+}
+
+#navibereich {
+    background-color: gray;
+    padding         : 5px 5px;
+    text-align      : right;
+    position        : fixed;
+    /*Navi bleibt an einer stelle und geht nur so lang, wie groß es ist*/
+    top             : 0;
+}
+
+#navibereich li,
+.aside-navi {
+    /*Navibereich beschränken - Alle li-Kisten gestalten*/
+    display        : inline;
+    /* li nebeneinander anzeigen, Gegenteil von Block */
+    list-style-type: none;
+    /* ohne Aufzählungspunkte */
+}
+
+#navibereich a,
+.aside.navi {
+    color          : indigo;
+    text-decoration: none;
+    padding        : 5px 30px;
+    /*oder 5px*/
+}
+
+#navibereich a:hover,
+.aside-navi {
+    color: mediumturquoise;
+}
+
+#navibereich a:hover,
+#index1.html #navi1 a,
+#index2.html #navi2 a,
+#index3.html #navi3 a {
+    color: mediumturquoise;
+}
+
+/*image {
+        display: inline;
+    }*/
+img {
+    align-items: center;
+}
+
+img {
+    align-items: right;
+}
+
+.blocktext {
+    hyphens   : auto;
+    /*Ändert Silbentrennung*/
+    text-align: justify;
+    /*Blocksatz*/
+}
+
+.Pfeil {
+    float: right;
+}
+
+.container {
+    position  : relative;
+    text-align: center;
+    color     : black;
+}
+
+.top-left {
+    position: absolute;
+    top     : 8px;
+    left    : 16px;
+}
+
+/*ABOUT ME*/
+#name-container {
+    height             : 300px;
+    width              : 100%;
+    background         : #49bed3;
+    color              : #fff;
+    font-family        : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Text zentrieren */
+    text-align         : center;
+    /* Inhalt vertikal mittig platzieren */
+    display            : -webkit-flex;
+    display            : -webkit-box;
+    display            : -ms-flexbox;
+    display            : flex;
+    -webkit-align-items: center;
+    -webkit-box-align  : center;
+    -ms-flex-align     : center;
+    align-items        : center;
+}
+
+.inside {
+    padding: 20px;
+    border : 4px solid #fff;
+    margin : auto;
+}
+
+h2 {
+    font-size     : 40px;
+    font-weight   : 900;
+    text-transform: uppercase;
+    margin        : 0;
+}
+
+h3 {
+    font-size: 17px;
+    margin   : 0;
+}
