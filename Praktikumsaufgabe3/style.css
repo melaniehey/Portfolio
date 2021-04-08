@@ -108,8 +108,7 @@ a {
     height             : 300px;
     width              : 100%;
     /* background      : cadetblue; */
-    background-image   : url(Medien/blauweiß.jpg);
-    opacity            : 0.5;
+    background-image   : url(Medien/blauweiß.png);
     /* color           :black; */
     font-family        : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align         : center;
