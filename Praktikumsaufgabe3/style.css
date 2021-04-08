@@ -1,20 +1,30 @@
 body {
-    background-image: url("hintergrund.png");
+    background-image: url("Medien/hintergrund.png");
     font-family     : sans-serif;
-    /* text-align   : center; */
+    max-width       : 800px;
+    margin          : auto;
+}
+
+#kursivlink {
+    font-style: italic;
 }
 
 a {
-    text-decoration: none;
+    text-decoration   : none;
+    /* font-style     : italic; */
+    color             : rgb(22, 22, 163);
 }
 
+
 #navibereich {
-    background-color: gray;
-    padding         : 5px 5px;
-    position        : fixed;
-    right: 0;
+
+    background-color   : none;
+    padding            : 5px 5px;
+    position           : fixed;
+    right              : 22%;
     /*Navi bleibt an einer stelle und geht nur so lang, wie groß es ist*/
-    top             : 0;
+    top                : 0;
+    /* font-style      : normal; */
 }
 
 #navibereich li,
@@ -28,33 +38,36 @@ a {
 
 #navibereich a,
 .aside.navi {
-    color          : indigo;
+    color          : black;
     text-decoration: none;
-    padding        : 5px 30px;
+    padding        : 5px 20px;
     /*oder 5px*/
 }
 
 #navibereich a:hover,
-.aside-navi {
-    color: mediumturquoise;
+.aside-navi a:hover {
+    color: rgb(22, 22, 163);
+}
+
+.schwarz {
+    color: black;
 }
 
 #navibereich a:hover,
 .index1 #navi1 a,
 .index2 #navi2 a,
-.index3 #navi3 a {
-    color: mediumturquoise;
+.index3 #navi3 a,
+.aside-navi #navi4 a {
+    color: rgb(22, 22, 163);
 }
+
 
 /*image {
         display: inline;
     }*/
-img {
+#ich {
     align-items: center;
-}
-
-img {
-    align-items: right;
+    margin     : 50px;
 }
 
 .blocktext {
@@ -62,42 +75,75 @@ img {
     /*Ändert Silbentrennung*/
     text-align: justify;
     /*Blocksatz*/
+    margin-top: 30px;
 }
 
 .Pfeil {
-    float: right;
+    float        : right;
+    margin-top   : 20px;
+    margin-bottom: 20px;
+}
+
+.Pfeil2 {
+    float        : right;
+    margin-top   : 190px;
+    margin-bottom: 20px;
 }
 
 .container {
-    position  : relative;
-    text-align: center;
-    color     : black;
+    height             : 400px;
+    width              : 100%;
+    /* background-image: url(Medien/blauweiß.jpg); */
+
+    /* position     : relative;
+    text-align      : center;
+    color           : white;
+    margin-top      : 50px; */
+
 }
 
-.top-left {
+#bild2 {
+    width     : 100%; /*Nutzt den ganzen Platz der zu Verfügung ist.*/
+    opacity   : 0.5;
+    margin-top: 40px;
+}
+
+.center {
+    position : absolute;
+    top      : 55%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .center {
     position: absolute;
     top     : 8px;
     left    : 16px;
-}
+    float: center;
+    text-align: center;
+    align-items: center;
+    margin     : auto;
+} */
 
 /*ABOUT ME*/
 #name-container {
     height             : 300px;
     width              : 100%;
-    background         : #49bed3;
-    color              : #fff;
+    /* background      : cadetblue; */
+    background-image   : url(Medien/blauweiß.jpg);
+    opacity            : 0.5;
+    /* color           :black; */
     font-family        : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* Text zentrieren */
     text-align         : center;
-    display: flex;
-    align-items: center;
-    margin: auto;
+    display            : flex;
+    align-items        : center;
+    margin-top         : 40px;
 }
 
 .inside {
     padding: 20px;
-    border : 4px solid #fff;
-    margin : 0 40px 0 195px;
+    border : 4px solid black;
+    margin : auto;
 }
 
 h2 {
@@ -112,26 +158,58 @@ h3 {
     margin   : 0;
 }
 
-body {
-    max-width: 800px;
-    margin   : auto;
-}
-.icons img:hover{
+.icons img:hover {
     opacity: 0.5;
 }
-#absender, #kontaktformular input[type="submit"]{
+
+#absender,
+#kontaktformular input[type="submit"] {
     margin-bottom: 10px;
 }
-#kontaktformular input[type="text"], #kontaktformular textarea{
-    width: 200px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: lightgrey;
-    border: 1px solid lightgray;
-    border-radius: 3px;
+
+#kontaktformular input[type="text"],
+#kontaktformular textarea {
+    width              : 350px;
+    font-family        : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: lightgrey; */
+    background-color   : rgb(187, 203, 214);
+    border             : 1px solid lightgray;
+    border-radius      : 3px;
 }
-.aside-navi{
+
+.aside-navi {
     float: right;
 }
-.images{
-    width: 100%;
+
+.images {
+    width     : 100%;
+    margin-top: 40px;
+}
+
+.images p {
+    font-size: small;
+}
+
+.images div {
+    width  : 300px;
+    display: inline-block;
+}
+
+/* #Anker {
+    font-size: x-large;
+} */
+
+.text div {
+    width       : 350px;
+    display     : inline-block;
+    margin-right: 40px;
+}
+
+.logo {
+    margin-top: 10px;
+    width     : 200px;
+}
+
+#aboutme {
+    font-size: x-large;
 }
