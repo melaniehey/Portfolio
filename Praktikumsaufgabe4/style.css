@@ -4,8 +4,9 @@ body {
     margin          : auto;
 }
 
-body *{
-    font-family     : sans-serif;
+/* Komplexer Selektor - Universal */
+body * {
+    font-family: sans-serif;
 }
 
 #kursivlink {
@@ -17,7 +18,8 @@ a {
     color          : rgb(22, 22, 163);
 }
 
-div h1{
+/* Komplexer Selektor - Nachfahren */
+div h1 {
     text-decoration: none;
 }
 
@@ -31,18 +33,22 @@ div h1{
     top             : 0;
 }
 
-#navi1, #navi2, #navi3{
+#navi1,
+#navi2,
+#navi3 {
     margin-left: 30px;
 }
 
-#navibereich > a,   
+/* Komplexer Selektor - Eltern/Kind */
+/* Transition */
+#navibereich>a,
 .aside-navi {
     /*Navibereich beschränken - Alle li-Kisten gestalten*/
-    display        : inline;
+    display        : inline-block;
     /* li nebeneinander anzeigen, Gegenteil von Block */
     list-style-type: none;
     /* ohne Aufzählungspunkte */
-    transition: transform 0.5s ease-in-out;
+    transition     : transform 0.5s ease-in-out;
 }
 
 #navibereich,
@@ -54,14 +60,15 @@ div h1{
 
 #navibereich a:hover,
 .aside-navi a:hover {
-    color: rgb(22, 22, 163);
+    color          : rgb(22, 22, 163);
     text-decoration: underline;
-    transform: rotate(360deg);
+    transform      : rotate(360deg);
 }
 
 .schwarz {
     color: black;
 }
+
 /* Seite auf der man ist soll blau hervorgehoben werden. */
 #navibereich a:hover,
 .index1 #navi1 a,
@@ -148,6 +155,7 @@ h3 {
     margin   : 0;
 }
 
+/* Komplexer Selektor - Pseudoklasse */
 .icons img:hover {
     opacity: 0.5;
 }
@@ -156,14 +164,13 @@ h3 {
     width: 40px;
 }
 
-
-
 #absender,
 #kontaktformular input[type="submit"] {
     margin-bottom: 10px;
 }
 
-h1 + form input[type="text"],
+/* Komplexer Selektor - Folgeelement und Attribut */
+h1+form input[type="text"],
 #kontaktformular textarea {
     width              : 350px;
     font-family        : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -218,4 +225,222 @@ h1 + form input[type="text"],
 #kurz:hover, #kurz:focus{
     color: #333;
     background-color: #fff;
+} */
+
+/* Animation */
+.inside,
+.inside h1 {
+    animation-name    : bunt;
+    animation-duration: 4s;
+}
+
+@keyframes bunt {
+    0% {
+        border-color: red;
+        color       : red;
+    }
+
+    25% {
+        border-color: yellow;
+        color       : yellow;
+    }
+
+    50% {
+        border-color: blue;
+        color       : blue;
+    }
+
+    75% {
+        border-color: green;
+        color       : green;
+    }
+
+    100% {
+        border-color: black;
+        color       : black;
+    }
+}
+
+/* Responsive (Tablet) */
+@media screen and (max-width:1024px) {
+    body {
+        max-width: 100%;
+    }
+
+    /* ABOUT ME */
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 22%;
+        top             : 0;
+        font-size       : 30px;
+    }
+
+    #ich {
+        align-items: center;
+        margin     : 50px;
+        margin-left: 200px;
+    }
+
+    /* Eigentlich löschen, weiß nicht wie */
+    .Pfeil {
+        float        : right;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        margin-right : 20px;
+    }
+
+    /* WORK */
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 22%;
+        top             : 0;
+        font-size       : 30px;
+    }
+
+    .images div {
+        /* width: 300px; */
+        display    : inline-block;
+        margin-left: 50px;
+    }
+
+    .aside-navi {
+        float       : right;
+        margin-right: 45px;
+    }
+
+    /* Eigentlich löschen, weiß nicht wie */
+    .Pfeil {
+        float        : right;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        margin-right : 20px;
+    }
+
+    /* CONTACT */
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 22%;
+        top             : 0;
+        font-size       : 30px;
+    }
+
+    .center {
+        position : absolute;
+        top      : 37%;
+        left     : 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 2%;
+        top             : 20px;
+    }
+
+    .logo {
+        margin-top : 10px;
+        margin-left: 2%;
+        width      : 200px;
+    }
+
+    /* Eigentlich löschen, weiß nicht wie */
+    .Pfeil {
+        float        : right;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        margin-right : 20px;
+    }
+}
+
+/* Responsive (Mobil) */
+@media screen and (max-width:600px) {
+
+    /* Kein max-width: 100% weil Mobil kleiner ist als tablet und schon drin liegt. Also sowieso 100% */
+
+    /* ABOUT ME */
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 22%;
+        top             : 0;
+        font-size       : 30px;
+    }
+
+    .center {
+        position : absolute;
+        top      : 23%;
+        left     : 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Eigentlich löschen, weiß nicht wie */
+    .Pfeil {
+        float        : right;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        margin-right : 20px;
+    }
+
+    /* WORK */
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 22%;
+        top             : 0;
+        font-size       : 30px;
+    }
+
+    /* Eigentlich löschen, weiß nicht wie */
+    .Pfeil {
+        float        : right;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        margin-right : 20px;
+    }
+
+    /* CONTACT */
+    #navibereich {
+        background-color: none;
+        padding         : 5px 5px;
+        position        : fixed;
+        right           : 22%;
+        top             : 0;
+        font-size       : 30px;
+    }
+
+    .center {
+        position : absolute;
+        top      : 29%;
+        left     : 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Eigentlich löschen, weiß nicht wie */
+    .Pfeil {
+        float        : right;
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        margin-right : 20px;
+    }
+
+}
+
+/* Flexbox */
+/* .images {
+
+    display: flex;
+    flex-direction: row;
+}
+.row {
+    display: flex;
 } */
