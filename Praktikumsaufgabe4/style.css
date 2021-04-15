@@ -52,10 +52,13 @@ div h1 {
 }
 
 #navibereich,
-.aside.navi {
+.aside.navi  {
     color          : black;
     text-decoration: none;
     padding        : 50px 20px;
+}
+#navibereich a{
+    color: black;
 }
 
 #navibereich a:hover,
@@ -70,8 +73,8 @@ div h1 {
 }
 
 /* Seite auf der man ist soll blau hervorgehoben werden. */
-#navibereich a:hover,
-.index1 #navi1 a,
+#navibereich,
+.index1 #navi1 ,
 .index2 #navi2 a,
 .index3 #navi3 a,
 .aside-navi #navi4 a {
@@ -89,6 +92,7 @@ div h1 {
     text-align: justify;
     /*Blocksatz*/
     margin-top: 30px;
+    display: block;
 }
 
 .Pfeil {
@@ -202,7 +206,7 @@ h1+form input[type="text"],
     width: 300px;
 }
 
-.text div {
+#text div {
     width       : 350px;
     display     : inline-block;
     margin-right: 40px;
@@ -281,6 +285,11 @@ h1+form input[type="text"],
         align-items: center;
         margin     : 50px;
         margin-left: 200px;
+    }
+    #text {
+        flex-wrap: wrap;
+        display       : flex;
+        /* flex-direction: row; */
     }
 
     /* Eigentlich löschen, weiß nicht wie */
@@ -374,6 +383,11 @@ h1+form input[type="text"],
         top             : 0;
         font-size       : 30px;
     }
+    #text {
+        flex-wrap: wrap;
+        display       : flex;
+        /* flex-direction: row; */
+    }
 
     .center {
         position : absolute;
@@ -400,6 +414,10 @@ h1+form input[type="text"],
         font-size       : 30px;
     }
 
+    main {
+        width: 600px;
+    }
+
     /* Eigentlich löschen, weiß nicht wie */
     .Pfeil {
         float        : right;
@@ -407,6 +425,12 @@ h1+form input[type="text"],
         margin-bottom: 20px;
         margin-right : 20px;
     }
+
+    /* .images {
+
+
+        flex-direction: column;
+    } */
 
     /* CONTACT */
     #navibereich {
@@ -423,6 +447,7 @@ h1+form input[type="text"],
         top      : 29%;
         left     : 50%;
         transform: translate(-50%, -50%);
+        width    : 100%;
     }
 
     /* Eigentlich löschen, weiß nicht wie */
@@ -432,15 +457,15 @@ h1+form input[type="text"],
         margin-bottom: 20px;
         margin-right : 20px;
     }
-
 }
 
 /* Flexbox */
-/* .images {
-
-    display: flex;
+.images {
+    flex-wrap: wrap;
+    display       : flex;
     flex-direction: row;
 }
+
 .row {
     display: flex;
-} */
+}
