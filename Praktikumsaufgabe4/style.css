@@ -31,6 +31,7 @@ div h1 {
     right           : 22%;
     /*Navi bleibt an einer stelle und geht nur so lang, wie groß es ist*/
     top             : 0;
+    font-size: 23px;
 }
 
 #navi1,
@@ -73,11 +74,10 @@ div h1 {
 }
 
 /* Seite auf der man ist soll blau hervorgehoben werden. */
-#navibereich,
-.index1 #navi1 ,
-.index2 #navi2 a,
-.index3 #navi3 a,
-.aside-navi #navi4 a {
+.index1 #navibereich #navi1,
+.index2 #navibereich #navi2,
+.index3 #navibereich #navi3,
+.aside-navi #navibereich #navi4 a {
     color: rgb(22, 22, 163);
 }
 
@@ -284,12 +284,16 @@ h1+form input[type="text"],
     #ich {
         align-items: center;
         margin     : 50px;
-        margin-left: 200px;
     }
     #text {
         flex-wrap: wrap;
         display       : flex;
         /* flex-direction: row; */
+    }
+
+    #inhalt-mittig{
+        width:fit-content;
+        margin:auto;
     }
 
     /* Eigentlich löschen, weiß nicht wie */
@@ -336,7 +340,7 @@ h1+form input[type="text"],
         position        : fixed;
         right           : 22%;
         top             : 0;
-        font-size       : 30px;
+        font-size       : 25px;
     }
 
     .center {
@@ -347,7 +351,6 @@ h1+form input[type="text"],
     }
 
     #navibereich {
-        background-color: none;
         padding         : 5px 5px;
         position        : fixed;
         right           : 2%;
@@ -375,24 +378,27 @@ h1+form input[type="text"],
     /* Kein max-width: 100% weil Mobil kleiner ist als tablet und schon drin liegt. Also sowieso 100% */
 
     /* ABOUT ME */
-    #navibereich {
-        background-color: none;
-        padding         : 5px 5px;
-        position        : fixed;
-        right           : 22%;
-        top             : 0;
-        font-size       : 30px;
-    }
+    
     #text {
         flex-wrap: wrap;
         display       : flex;
         /* flex-direction: row; */
     }
 
+    #text div{
+        width:100%;
+        margin-left:40px;
+    }
+
+    #ich{
+        margin:auto;
+        display: block;
+    }
+
     .center {
-        position : absolute;
-        top      : 23%;
-        left     : 50%;
+        position: absolute;
+        top: 53%;
+        left: 51%;
         transform: translate(-50%, -50%);
     }
 
@@ -409,21 +415,19 @@ h1+form input[type="text"],
         background-color: none;
         padding         : 5px 5px;
         position        : fixed;
-        right           : 22%;
-        top             : 0;
-        font-size       : 30px;
+        right: 2%;
+        top: 23px;
+        font-size: 18px;
     }
 
     main {
-        width: 600px;
+        width: 100%;
     }
 
     /* Eigentlich löschen, weiß nicht wie */
-    .Pfeil {
-        float        : right;
-        margin-top   : 20px;
-        margin-bottom: 20px;
-        margin-right : 20px;
+    .Pfeil, .Pfeil2 {
+
+        display:none;
     }
 
     /* .images {
@@ -433,22 +437,7 @@ h1+form input[type="text"],
     } */
 
     /* CONTACT */
-    #navibereich {
-        background-color: none;
-        padding         : 5px 5px;
-        position        : fixed;
-        right           : 22%;
-        top             : 0;
-        font-size       : 30px;
-    }
 
-    .center {
-        position : absolute;
-        top      : 29%;
-        left     : 50%;
-        transform: translate(-50%, -50%);
-        width    : 100%;
-    }
 
     /* Eigentlich löschen, weiß nicht wie */
     .Pfeil {
