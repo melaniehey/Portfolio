@@ -236,6 +236,7 @@ h1+form input[type="text"],
 .inside h1 {
     animation-name    : bunt;
     animation-duration: 4s;
+    animation-iteration-count: infinite
 }
 
 @keyframes bunt {
